@@ -1,0 +1,98 @@
+@charset "UTP-8";
+
+/* mystyle05.css */
+
+/* 05_다양한selector.html */
+/* https://www.w3schools.com/cssref/css_selectors.php */
+
+p{ /*p 모든요소*/
+    font-family: 궁서체;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+h2,p{ /*모든 P , 모든 H2 */
+    color: blue;
+}
+
+div p { /* div 안에 있는 모든 p */
+    color: pink; background-color: green;
+
+}
+
+div>span>p{ /*부모>부모>자식 라일라 접근*/
+    text-decoration: line-through;
+    text-decoration-color: black;
+}
+/*개나리 나팔꽃 해바라기 선택 */
+div h2{
+    color: red;
+}
+/* 해바라기 선택 */
+div>span>h2{
+    color: green;
+    font-size: 30px;
+}
+
+#mybox{ /*Box Model*/
+    width: 320px;
+    padding: 10px; /*내용의 안쪽여백 상하좌우 전부 적용*/
+    border: 5px solid black;
+    margin: auto;} /*바깥쪽여백 수평을 기준으로 가운데정렬*/
+
+#menu{
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+}
+.hide{ /*화면에 노출안됨*/
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+#nav{
+    width: 300px;
+    height: 500px;
+    background-color: beige;
+    margin: auto;
+}
+
+#nav>ul{ /*id=nav의 자식요소중에서 ul태그*/
+list-style: none;
+}
+
+#nav .news{ /* ID=nav 안에서 모든 class=news*/
+    background-color: red;
+    font-weight: bold;
+}
+#nav ul .news {
+    background-color: blue;
+}
+#nav>ol>li:nth-child(2) /* <li> 요소중에서 2번째 (김연아)*/
+{
+    font-weight: bold
+}
+/*
+    참조 https://www.w3schools.com/cssref/sel_active.asp
+    a:link     - 일반적 링크 및 방문하지 않은 링크
+    a:visited  - 방문했던 링크
+    a:hover    - 마우스 올렸을 때 링크
+    a:active   - 마우스 누르는 순간의 링크
+*/
+a:link{ color: pink; text-decoration-line:none;}
+a:visited{color: pink; text-decoration-line: none;}
+a:hover{color: blue; text-decoration-line: underline;}
+a:active{color: pink; text-decoration-line: none;}
+
+/* 아이티윌 링크만 CSS적용 */
+#nav>ol>li>a{
+    width: 200px;
+    height: 100px;
+    background-color: hotpink;
+    text-decoration-line: underline;
+}

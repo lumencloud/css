@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+        
+    <head>
+        <title>19_transform.html</title>
+        <style>
+            /* transform 변형 */
+            /* translate 움직임 */
+            
+            #translate{
+                width: 100px;
+                height: 100px;
+                background-color: hotpink;
+                transform: translate(200px, 100px);
+            }
+            #translate:hover{
+                transform: translate(10px, 10px);
+            }
+            #rotate{
+                width: 100px;
+                height: 100px;
+                background-color: skyblue;
+                position: relative;
+                left: 50px;
+                transform:rotate(45deg);
+                transition: .3s ease;
+            }
+            #rotate:hover {
+                transform: rotate(360deg);
+
+            }
+            #scale{
+                width: 100px;
+                height: 100px;
+                background-color: orange;
+                position: relative;
+                left: 300px;
+                transition: .3s ease;
+            }
+            #scale:hover{
+                transform: scale(2) rotate(180deg);
+            }
+
+            #skew{
+                width: 100px;
+                height: 100px;
+                background: lime;
+                position: relative;
+                left: 50px;
+                transform: skew(10deg,15deg);
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <h1> Transform 변형</h1>
+
+        <div id="translate">translate</div>
+        <div id="rotate">rotate</div>
+        <div id="scale">scale</div>
+        <div id="skew">skew</div>
+        
+    </body>
+        
+        
+</html>

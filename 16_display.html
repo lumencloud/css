@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>16_display.html</title>
+    <style>
+        #mydiv {
+            background-color: yellow;
+            left: 30px;
+            top: 350px;
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            overflow: scroll;
+            /* hidden ㅣ scroll */
+            --display: block;
+            /* none ㅣblock 화면출력 */
+            visibility: visible;
+            /*hidden ㅣ visible 화면출력 */
+        }
+
+        p {color: red;}
+        p.ex1 {display: none;}
+        p.ex2 {display: inline;}
+        p.ex3 {display: block;}
+        p.ex4 {display: inline-block;}
+    </style>
+</head>
+
+<body>
+    <!-- https://www.w3schools.com/css/css_display_visibility.asp -->
+
+    <h1>CSS Layout - The display Property</h1>
+
+    <iframe src="15_float.html" frameborder="0" width="200" height="150"></iframe>
+    <hr>
+
+    <textarea cols="30" rows="5">
+    - 정보처리 기능사 : 누구나
+    - 정보처리 산업기사 : 과정형/검정형
+    - 정보처리 기사 : 검정형
+    - 정보처리 기술사
+    </textarea>
+    <hr>
+
+    <div id="mydiv">
+        - 실습은 학원PC를 사용할 것을 추천합니다
+        - 수업녹화영상은 유튜브에 올릴예정입니다
+        - 수업내용 정리할 수 있는 개인 블로그 및 Notion 운영을 추천합니다
+        - 에러노트 작성하기
+        - 실습은 학원PC를 사용할 것을 추천합니다
+    </div>
+
+    <br><br><br><br><br><br><br><br><br>
+
+    <h3>display 세부 속성</h3>
+    <!-- display : none -->
+    <div style="display: none;">무궁화</div>
+
+    <!-- block요소 : 가로 영역 전부채움 width height 크기 지정 가능 -->
+    <div style="background-color: red; width: 50px; height: 100px;">오필승</div>
+    <div style="background-color: green;">코리아</div>
+    <p style="background-color: purple;">대한민국</p>
+    <header style="background-color: skyblue;">아이티윌</header>
+    <section style="background-color: gray;">무궁화</section>
+
+    <!-- inline요소 내용만큼만 영역이 존재, 줄바꿈 안됨-->
+    <span style="background-color: salmon; width: 100px; height: 300px;">개나리</span>
+    <strong style="background-color:brown;">진달래</strong>
+
+    <!-- inline-block 요소 : 줄바꿈 안됨, 크기조절은 가능 
+    block 요소와 inline 요소의 중간형태-->
+
+    <h2>display: none:</h2>
+    <div>
+        Lorem ipsum dolor.... <p class="ex1">HELLO WORLD!</p> Vestibulum volutpat
+    </div>
+
+    <h2>display: inline:</h2>
+    <div>
+        Lorem ipsum dolor.... <p class="ex2">HELLO WORLD!</p> Vestibulum volutpat
+    </div>
+
+    <h2>display: block:</h2>
+    <div>
+        Lorem ipsum dolor.... <p class="ex3">HELLO WORLD!</p> Vestibulum volutpat
+    </div>
+
+    <h2>display: inline-block:</h2>
+    <div>
+        Lorem ipsum dolor.... <p class="ex4">HELLO WORLD!</p> Vestibulum volutpat
+    </div>
+
+
+</body>
+
+
+</html>
